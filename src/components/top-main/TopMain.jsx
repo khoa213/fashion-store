@@ -3,26 +3,28 @@ import searchIcon from "../../images/search-icon.svg";
 import person from "../../images/person.svg";
 import girl from "../../images/girl.svg";
 import { Button } from "../Button";
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 const topMain = {
-    width: "1920px",
+    maxWidth: "1920px",
     height: "847px",
-    backgroundColor: "#F0F0F0"
+    backgroundColor: "#F0F0F0",
+    margin:'0 auto',
 }
 const header = {
-    width: "1320px",
+    maxWidth: "1320px",
     height: "59px",
-    marginTop: "31px",
-    marginLeft: "300px",
+    margin: '0 auto',
     borderBottom: "3px solid #E3E3E3"
 }
 const shopName = {
-    marginLeft: "536px",
+    marginLeft: "25%",
     fontWeight: 400,
     fontSize: "42px",
 }
 
 const Account = styled.span`
-    margin-left: 340px;
+    margin-left: 10%;
      font-weight: 400;
      font-size: 18px;
      &:hover 
@@ -32,7 +34,7 @@ const Account = styled.span`
 `;
 
 const Shopping = styled.span`
-    margin-left: 55px;
+    margin-left: 2%;
      font-weight: 400;
      font-size: 18px;
      &:hover 
@@ -41,13 +43,12 @@ const Shopping = styled.span`
      };
 `;
 const content = {
-    width: "1226px",
+    maxWidth: "1226px",
     height: "562px",
-    marginTop: "135px",
-    marginLeft: "300px",
+    margin:'0 auto'
 }
 const introduce = {
-    width: "686px",
+    maxWidth: "686px",
     height: "364px",
     marginTop: "74px",
     float: "left",
@@ -64,7 +65,7 @@ const collectionContent = {
     marginTop: "52px"
 }
 const productImage = {
-    width: "442px",
+    maxWidth: "442px",
     height: "562px",
     marginLeft: "98px",
     float:"left"
@@ -72,6 +73,7 @@ const productImage = {
 
 
 const TopMain = () => {
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1224px)' });
     return (
         <div style={topMain}>
             <div style={header}>
@@ -93,9 +95,11 @@ const TopMain = () => {
                     color="white" changeBg="orange"></Button>
                     
                 </div>
-                <div style={productImage}>
-                    <img src={girl} alt="" />
-                </div>
+                {isBigScreen && <div style={productImage}>
+                                <img src={girl} alt="" />
+                                </div>
+                }
+                
             </div>
         </div>
     )

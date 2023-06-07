@@ -1,6 +1,6 @@
 import instagramImage from '../../images/image-product-12.svg';
 const instagram = {
-    width: '1920px',
+    maxWidth: '1320px',
     height: '653px',
     backgroundColor: '#F0F0F0',
     marginTop: '100px'
@@ -24,13 +24,13 @@ const instaName = {
     marginTop: '70px',
 }
 const footer1 = {
-    width: '1912px',
+    maxWidth: '1320px',
     height: '355px',
 }
 const topFooter = {
-    width: '1320px',
+    maxWidth: '1320px',
     height: '213px',
-    marginLeft: '296px',
+    
 }
 const left = {
     width: '392px',
@@ -47,23 +47,27 @@ const tH = {
     padding: '0px 100px '
 }
 const bottomFooter = {
-    width: '1912px',
+    maxWidth: '1320px',
     height: '52px',
     backgroundColor:'#1E2832',
     color:'white',
 }
 const shopName = {
-    marginLeft: '300px',
+    marginLeft: '20px',
     paddingTop: '15px',
 }
 const scrollButton = {
     float: 'right',
-    marginRight:'339px',
+    marginRight:'20px',
     marginTop: '-20px',
+}
+const formatFooter = {
+    maxWidth: '1320px',
+    margin:'0 auto'
 }
 const Footer = () => {
     return (
-        <div>
+        <div style={formatFooter}>
         <div style={instagram}>
             <div style={text}>
                 Follow products and discounts on instagram

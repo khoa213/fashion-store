@@ -14,9 +14,9 @@ const subText = {
     marginTop:"10px"
 }
 const subNav = {
-    width:"1320px",
+    maxWidth:"1320px",
     height:"32px",
-    marginLeft:"300px"
+    margin:'0 auto',
 }
 const navButton = {
     width:"373px",
@@ -26,16 +26,17 @@ const navButton = {
     float: "left",
 }
 const showProduct = {
-    marginLeft:"150px",
+    maxWidth:'1320px',
     display:"flex",
     flexWrap: "wrap",
     justifyContent:"space-between",
+    margin:'0px auto',
 }
 const banner = {
-    width:"1420px",
+    maxWidth:"1320px",
     height:"776px",
     position: "relative",
-    marginLeft:"150px",
+    margin:"0 auto",
 }
 const logo = {
     position: "absolute",
